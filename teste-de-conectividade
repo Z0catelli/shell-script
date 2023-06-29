@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Digite o endereço IP que deseja testar:"
+read endereco
+
+testar_conectividade() {
+	endereco=$1
+
+	resultado=$(ping -c 1 $endereco)
+
+	if [ $? -eq 0 ];
+	then
+		echo "Sucesso! O endereço $endereco está disponível para conexões."
+	else 
+		echo "Falha: não foi possível se conectar com o endereço $endereco."
+	fi
+}
+
+testar_conectividade $endereco

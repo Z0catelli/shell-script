@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Digite o endereço IP que aplicar:"
+read endereco_ip
+
+echo "Digite a máscara de rede que deseja aplicar:"
+read mascara_rede
+
+configurar_rede() {
+	endereco_ip=$1
+	mascara_rede=$2
+
+	resultado=$(sudo ifconfig eth0 $endereco_ip netmask $mascara_rede up)
+
+	if [ $? -eq 0 ];
+	then
+		echo "Sucesso! A rede foi configurada com sucesso"
+	else 
+		echo "Falha: não foi possível configurar a rede."
+	fi
+}
+
+configurar_rede
