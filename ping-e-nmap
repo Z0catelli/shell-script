@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo "Digite o endereço IP que deseja testar:"
+read endereco_ip
+
+if [[ ! $endereco_ip =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
+    echo "IP inválido. Por favor, insira um endereço IP válido."
+    exit 1
+fi
+
+varredura_portas() {
+        endereco_ip=$1
+
+        resultado=$(nmap $endereco_ip | tail -n 8)
+	echo "$resultado" 
+
+        if [ $? -eq 0 ] ;
+        then
+                echo "Varredura das portas do endereço $endereco_ip foi realizada com sucesso!" 
+        else 
+                echo "Falha: não foi possível fazer a verificação ds portas do endereço $endereco_ip." 
+        fi
+}
+
+testar_conectividade() {
+	endereco_ip=$1
+
+	resultado=$(ping -c 1 $endereco_ip)
+
+	if [ $? -eq 0 ];
+	then
+		echo "Sucesso! O endereço $endereco_ip está disponível para conexões."
+		echo ""
+		varredura_portas $endereco_ip
+	else 
+		echo "Falha: não foi possível se conectar com o endereço $endereco_ip."
+	fi
+}
+
+testar_conectividade $endereco_ip
+
