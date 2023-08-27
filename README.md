@@ -23,7 +23,7 @@
   <h1> Como utilizar os scripts </h1>
   <ol>
     <li> Baixe o arquivo do script que deseja executar.</li>
-    <li> Abra o terminal linux e navegue até o diretorio onde o arquivo foi baixado utilizando o comando <code> cd [caminho-do-diretorio]. </code> </li>
+    <li> Abra o terminal linux e navegue até o diretorio onde o arquivo foi baixado utilizando o comando: <br> <code> cd [caminho-do-diretorio]. </code> </li>
     <li> Estando no diretório correto, execute o comando <code> bash [nome-do-script]. </code> </li>
   </ol>
 </div>
