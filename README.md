@@ -3,10 +3,10 @@
 </div>
 
 <div>
-<img alt="Static Badge" src="https://img.shields.io/badge/Status-Concluded-green">
-<img alt="Static Badge" src="https://img.shields.io/badge/Shell-8A2BE2">
-<img alt="Static Badge" src="https://img.shields.io/badge/Bash-8A2BE2">
-<img alt="Static Badge" src="https://img.shields.io/badge/Linux-8A2BE2">
+<img alt="Status Concluded Green Badge" src="https://img.shields.io/badge/Status-Concluded-green">
+<img alt="Shell Purple Badge" src="https://img.shields.io/badge/Shell-8A2BE2">
+<img alt="Bash Purple Badge" src="https://img.shields.io/badge/Bash-8A2BE2">
+<img alt="Linux Purple Badge" src="https://img.shields.io/badge/Linux-8A2BE2">
 </div> <br>
 
 <div>
